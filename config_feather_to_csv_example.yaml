@@ -1,0 +1,17 @@
+# Example configuration file for Feather -> CSV conversion
+# Usage: csv-feather-convert config_feather_to_csv_example.yaml
+
+# Path to input file
+input_file: "input/2018_Cities_Disclosing_to_CDP.feather"
+
+# Path to output file (written as UTF-8)
+output_file: "output/2018_Cities_Disclosing_to_CDP.csv"
+
+# Optional: "csv2feather" or "feather2csv" (inferred from extensions if omitted)
+direction: "feather2csv"
+
+# Optional: CSV field delimiter (default ",")
+delimiter: ","
+
+# Optional: write column names as first line (default true)
+include_header: true

@@ -1,0 +1,20 @@
+# Example configuration file for CSV -> Feather conversion
+# Usage: csv-feather-convert config_csv_to_feather_example.yaml
+
+# Path to input file
+input_file: "input/sample.csv"
+
+# Path to output file
+output_file: "output/sample.feather"
+
+# Optional: "csv2feather" or "feather2csv" (inferred from extensions if omitted)
+direction: "csv2feather"
+
+# Optional: CSV field delimiter (default ",")
+delimiter: ","
+
+# Optional: CSV input encoding (default "utf8")
+encoding: "utf8"
+
+# Optional: Feather compression: "zstd" (default), "lz4" or "uncompressed"
+compression: "zstd"

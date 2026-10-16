@@ -1,0 +1,7 @@
+output/
+*__pycache__*
+venv/
+.venv/
+input/
+*.sif
+*.tar

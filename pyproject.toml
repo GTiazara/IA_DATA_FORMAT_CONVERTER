@@ -1,0 +1,26 @@
+[project]
+name = "ia-data-format-converter"
+version = "0.1.0"
+description = "Data format conversion utilities (CSV <-> Feather, ...)"
+authors = [
+    {name = "gaetan.tiazara",email = "gaetan.tiazara@outlook.fr"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "omegaconf>=2.3.0",
+    "pyarrow>=15.0.0",
+]
+
+[tool.poetry]
+packages = [
+    {include = "csv_feather_converter", from = "src"}
+]
+
+[project.scripts]
+csv-feather-convert = "csv_feather_converter.main:main"
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

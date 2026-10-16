@@ -1,0 +1,26 @@
+Bootstrap: docker-archive
+From: {{ TAR_FILE }}
+Stage: build
+
+%arguments
+    TAR_FILE=ia-data-format-converter-0.1.0.tar
+    VERSION=0.1.0
+
+%labels
+    Author gaetan.tiazara@outlook.fr
+    Version {{ VERSION }}
+    Description Data format conversion utilities (CSV <-> Feather)
+
+%environment
+    export LC_ALL=C.UTF-8
+    export LANG=C.UTF-8
+    export PATH="/app:${PATH}"
+
+%runscript
+    exec "$@"
+
+%help
+    Data format conversion utilities container.
+
+    Examples:
+      apptainer exec ia-data-format-converter.sif csv-feather-convert config.yaml
