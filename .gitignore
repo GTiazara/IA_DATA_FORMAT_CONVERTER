@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+dist/
+build/
+*.egg-info/
+
+# Generated outputs and local data
+*.feather
+*.parquet
+*.zarr/
+*.sqlite
+data/
+output/

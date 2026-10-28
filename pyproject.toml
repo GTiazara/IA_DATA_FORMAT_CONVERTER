@@ -1,0 +1,34 @@
+[project]
+name = "ia-data-format-converter"
+version = "0.1.0"
+description = "Convert tabular CSV data into binary formats for ML/AI workloads (Feather, more to come)"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pyarrow>=15.0",
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+ia-convert = "ia_data_format_converter.cli:main"
+
+[tool.poetry]
+packages = [{ include = "ia_data_format_converter", from = "src" }]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0"
+ruff = "^0.9"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

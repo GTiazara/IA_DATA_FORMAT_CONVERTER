@@ -1,0 +1,11 @@
+# Example configuration for ia-convert.
+# Relative paths are resolved against the directory of this file (conf/).
+# Command-line arguments override every value below.
+
+input: ../data/train.csv
+output: ../data/train.feather
+to: feather
+sep: ","
+encoding: utf-8
+compression: lz4
+overwrite: false
